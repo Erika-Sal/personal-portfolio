@@ -1,14 +1,8 @@
-'use client'; 
-import { useState, useEffect } from 'react';
+
 import React from 'react'
 import Link from 'next/link'
-
-
-
-
 const Navbar = () => {
-    
-    
+
         return (
     <div>
       <nav className='navbar'>
