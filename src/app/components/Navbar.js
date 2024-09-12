@@ -1,12 +1,16 @@
-'use client'
 import { useState, useEffect } from 'react';
 import React from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic';
+
+
 
 const Navbar = () => {
     
     const [toggle, setToggle] = useState(false)
-   
+    const MyComponent = dynamic(() => import('./Navbar.js'), {
+      noSSR: true,
+    });
 
     const [matches, setMatches] = useState(
         window.matchMedia("(max-width: 500px)").matches
@@ -22,7 +26,7 @@ const Navbar = () => {
         return (
     <div>
       <nav className='navbar'>
-        <div className='brand-title'><Link href="/" style={{textDecoration:"none", color:"black"}}>Erika Salvador</Link></div>
+        <div className='brand-title'><Link href="/page" style={{textDecoration:"none", color:"black"}}>Erika Salvador</Link></div>
         <a class="toggle-button" onClick={() => setToggle(!toggle)}>
             <span className='bar'></span>
             <span className='bar'></span>
