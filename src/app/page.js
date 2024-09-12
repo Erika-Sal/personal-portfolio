@@ -1,16 +1,10 @@
-'use client'
+
 import Image from "next/image";
 import Navbar from "../app/components/Navbar"
 import Link from 'next/link'
-
+import Top from '../app/components/Top'
 export default function Home() {
 
-  const scrollToTop = () =>{ 
-    window.scrollTo({ 
-      top: 0,  
-      behavior: 'smooth'
-    }); 
-  }; 
 
   return (
     <>
@@ -53,7 +47,7 @@ export default function Home() {
     </div>
     <div className="back">
         <img src="/Chev.png" />
-    <button onClick={scrollToTop}>Back To Top</button>
+        <Top/>
     </div>
   
     </>

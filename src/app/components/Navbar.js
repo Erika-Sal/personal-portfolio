@@ -12,7 +12,7 @@ const Navbar = () => {
         return (
     <div>
       <nav className='navbar'>
-        <div className='brand-title'><Link href="/page" style={{textDecoration:"none", color:"black"}}>Erika Salvador</Link></div>
+        <div className='brand-title'><Link href="/" style={{textDecoration:"none", color:"black"}}>Erika Salvador</Link></div>
 
         <div className='navbar-links'>
           <ul>
