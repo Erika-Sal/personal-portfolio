@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+h1{
+    font-family: 'Libre Bodoni', cursive;
+    font-size:8vmin; 
+}
+
+p{
+    font-family: "Libre Caslon Display", serif;
+    font-size:3.5vmin; 
+}
+
+a{
+    text-decoration:none;
+    color:black
+}
+
+
+img{
+    max-width:50%;
+    max-height:40vmin; 
+}
+
+
+
+.sec22{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    height:110vh;
+    padding-top:10vmin;
+    text-align: center;
+
+}
+
+.sec2Text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.sec33{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    width:100%;
+  height:100vh;
+  padding-top:10vmin;
+  text-align: center;
+  background-color:#FFF2E6;
+}
+
+.sec5{
+    width:100%;
+    height:100vh;
+    padding-top:10vmin;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .sec5 > div > h2{
+    color:#69965D;
+    font-size:5vmin;
+    font-family: "Libre Caslon Display", serif;
+  font-weight:200;
+  }
+
+  
+  
+  .sec5 > p{
+    font-size: 3vmin; 
+    font-family: "Libre Caslon Display", serif;
+  }
+
+  @media (max-width: 600px) {
+
+    .sec1{
+        padding-top:30%;
+    }
+    
+    .sec5, .sec22{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sec33{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    p{
+        font-size:5vmin; 
+    }
+  }
