@@ -222,38 +222,7 @@ button{
 }
 
 @media (max-width: 600px) {
-  .toggle-button {
-    display: flex;
-    margin-top:2vmin; 
-    }
-
-  .navbar-links {
-    width:100%;
-    display:none; 
-  }
-
-  .navbar{
-    flex-direction: column; 
-    align-items: flex-start;
-  }
-
-  .navbar-links ul {
-    width: 100%; 
-    flex-direction:column; 
-  }
-
-  .navbar-links li{
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: .5rem 1rem; 
-  }
-
-  .navbar-links.active{
-    display:flex; 
-  }
-
+  
   .sec1{
     margin-top:12vmin; 
   }
