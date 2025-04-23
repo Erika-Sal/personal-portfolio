@@ -8,7 +8,7 @@ function page() {
   
 const OPTIONS = { dragFree: true, loop: true }
 const SLIDE_COUNT = 5
-const SLIDES = ["/Erika1.jpg",  "/Erika3.jpg", "/Erika4.jpg", "/Erika5.jpg", "/Erika7.jpeg"]
+const SLIDES = ["/hackathon.JPG",  "/ktp1.jpg", "/Erika4.jpg", "/friends.jpg", "/Erika7.jpeg", "ktp3.JPG", "koin1.jpg", "ktp4.JPG"]
 
   return (
     <>
