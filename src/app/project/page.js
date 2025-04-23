@@ -13,6 +13,14 @@ function page() {
         <img src="/ChevronUp.png"/>
       </div>
 
+      <div className='sec33'>
+        <div className='sec3Text'>
+            <a href='https://github.com/Erika-Sal/RoundUp'><h1 style={{marginBottom:"-1vmin"}}>RoundUp</h1></a>
+            <p>Best Design at UT's Women in Computer Science Hackathon 2025</p>
+        </div>
+        <img style={{border:"#69965D 4px solid"}} src="/RoundUp.png"/>
+      </div>
+
       <div className='sec22'>
         <img src="/python.png" />
         <div className='sec2Text'>
@@ -27,11 +35,11 @@ function page() {
             <a href='https://github.com/Erika-Sal/finalGameOfLife'><h1 style={{marginBottom:"-1vmin"}}>Game of Life Clone</h1></a>
             <p>Used Java to create a clone of the Game of Life board game</p>
         </div>
-        <img style={{border:"#69965D 8px solid"}} src="/gol.png"/>
+        <img style={{border:"#69965D 4px solid"}} src="/gol.png"/>
       </div>
 
       <div className='sec5'>
-      <img src='/qbert.png' style={{border:"#69965D 8px solid"}}/>
+      <img src='/qbert.png' style={{border:"#69965D 4px solid"}}/>
         <div className='sec4Text'>
             <a href='https://github.com/Erika-Sal/Qbert-haha'><h1 style={{marginBottom:"-1vmin"}}>Q*bert Clone</h1></a>
             <p>Used Java to create a clone of the Q*bert arcade game</p>

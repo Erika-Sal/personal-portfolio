@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <Navbar/>
     <div className="sec1">
-      <img src="/mainPic.jpg" className="mainPic"/>
+      <img src="/Erika_home.JPG" className="mainPic"/>
       <h1>Erika Salvador</h1>
       <h2>Computer Science Major at the University of Texas at Austin</h2>
       <p>Scroll to learn more</p>
