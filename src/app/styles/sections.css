@@ -1,0 +1,379 @@
+/* Hero */
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 9rem 2rem 4rem;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-polaroid {
+  --rotate: -4deg;
+  width: min(65vw, 280px);
+}
+
+.hero-polaroid img {
+  aspect-ratio: 4 / 5;
+}
+
+.sticker-hero {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -1.5rem;
+  transform: rotate(6deg);
+}
+
+.hero-text {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-name {
+  font-style: italic;
+  font-size: clamp(2.5rem, 7vmin, 4rem);
+  color: var(--green);
+  margin: 0;
+}
+
+.hero-bio {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* Work section: Featured project + accordion */
+
+#work {
+  padding: 6rem 2rem;
+}
+
+.featured-project {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  padding: 3rem 2.5rem 2.5rem;
+  background-color: white;
+  border: 2px solid var(--green);
+  border-radius: 20px;
+}
+
+.sticker-trophy {
+  position: absolute;
+  top: -1.1rem;
+  left: -1rem;
+  transform: rotate(-6deg);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.featured-title {
+  margin: 0 0 0.75rem;
+  font-size: 2.5rem;
+}
+
+.featured-description {
+  margin: 0;
+}
+
+.accordion {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.accordion-row {
+  border: 1px solid var(--pill-border);
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: none;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Libre Caslon Display", serif;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: var(--cream);
+}
+
+.accordion-icon {
+  color: var(--green);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.accordion-title {
+  flex: 1;
+}
+
+.accordion-chevron {
+  color: var(--green);
+  transition: transform 0.3s ease;
+}
+
+.accordion-chevron.open {
+  transform: rotate(180deg);
+}
+
+.accordion-details {
+  padding: 0 1.5rem 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.accordion-subtitle {
+  color: var(--green);
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Experience */
+
+#experience {
+  padding: 6rem 2rem;
+  background-color: white;
+}
+
+.experience-section {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-entry {
+  border-left: 4px solid var(--green);
+  padding-left: 1.5rem;
+}
+
+.timeline-role {
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+}
+
+.timeline-company {
+  margin: 0 0 0.15rem;
+  color: var(--green);
+  font-weight: bold;
+  font-family: "Libre Caslon Display", serif;
+}
+
+.timeline-dates {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #777;
+  font-family: "Libre Caslon Display", serif;
+}
+
+.timeline-impact {
+  margin: 0;
+}
+
+/* About: Skills + Gallery */
+
+#about {
+  padding: 6rem 2rem;
+}
+
+.skills-section {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-card {
+  background-color: white;
+  border: 1px solid var(--pill-border);
+  border-radius: 14px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+  color: var(--green);
+}
+
+.skill-label {
+  font-family: "Libre Caslon Display", serif;
+  font-size: 0.9rem;
+}
+
+.gallery-section {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-photo {
+  width: min(38vw, 190px);
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.1);
+}
+
+/* Contact */
+
+#contact {
+  padding: 6rem 2rem 5rem;
+  background-color: white;
+  text-align: center;
+}
+
+.contact-heading {
+  font-style: italic;
+  font-size: clamp(2rem, 6vmin, 3rem);
+  color: var(--green);
+  margin: 0 0 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-icon-link {
+  font-size: 1.8rem;
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+.contact-icon-link:hover {
+  color: var(--green);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-project {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .hero-polaroid {
+    width: min(70vw, 220px);
+  }
+
+  .sticker {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-photo {
+    width: min(45vw, 160px);
+  }
+
+  .accordion-header {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .contact-links {
+    gap: 1.5rem;
+  }
+
+  #work, #experience, #about, #contact {
+    padding: 4rem 1.2rem;
+  }
+
+  .featured-project {
+    padding: 2.5rem 1.5rem 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}

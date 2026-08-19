@@ -1,55 +1,39 @@
-'use client'
-import Image from "next/image";
-import Navbar from "../app/components/Navbar"
-import Link from 'next/link'
-import Top from '../app/components/Top'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import FeaturedProject from './components/FeaturedProject'
+import ProjectAccordion from './components/ProjectAccordion'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Gallery from './components/Gallery'
+import Contact from './components/Contact'
+import './styles/sections.css'
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <div className="sec1">
-        <img src="/Erika_home.JPG" className="mainPic"/>
-        <h1>Erika Salvador</h1>
-        <h2>Computer Science Major at the University of Texas at Austin</h2>
-        <p>Scroll to learn more</p>
-        <img src="/ChevronUp.png"/>
+      <Navbar />
+
+      <div id="top">
+        <Hero />
       </div>
 
-      <div className="sec2">
-        <h1>Say What? ... She Can Code?</h1>
-        <div className="pics">
-          <img src="/java.png"/>
-          <img src="/js.png"/>
-          <img src="/react.png"/>
-        </div>
-        <img src="/Component 4.png"/>
-      </div>
+      <section id="work">
+        <FeaturedProject />
+        <ProjectAccordion />
+      </section>
 
-      <div className="sec3">
-        <h1>Say What? ... She Can Teach Computer Science?</h1>
-        <img src="/icode.png"/> 
-        <div>
-          <h2>Orange Belt Instructor and Curriculum Developer for iCode Cypress</h2>  
-        </div>
-        <p>August 2022 - August 2024</p>
-      </div>
+      <section id="experience">
+        <Experience />
+      </section>
 
-      <div className="sec4">
-        <h1>Say What? ... She's Open to Connect?</h1>
-        <div className="pics2">
-          <a href="https://github.com/Erika-Sal"><img src="/github.png" /></a>
-          <a href="mailto:erikasalvador@utexas.edu"><img src="/email.png"/></a>
-          <a href="https://www.linkedin.com/in/erika-salvador-578743244/"><img src="/linkedIn.png"/></a>
-        </div>
-        <h2>Connect With Me!</h2>
-      </div>
-      
-      <div className='back-to-top'>
-        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          Back To Top
-        </button>
-      </div>
+      <section id="about">
+        <Skills />
+        <Gallery />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </>
-  );
+  )
 }

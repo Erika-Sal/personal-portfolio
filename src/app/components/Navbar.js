@@ -1,25 +1,20 @@
-
 import React from 'react'
-import Link from 'next/link'
+
 const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <a href="#top" className="brand-title">Erika Salvador</a>
 
-        return (
-    <div>
-      <nav className='navbar'>
-        <div className='brand-title'><Link href="/" style={{textDecoration:"none", color:"black"}}>Erika Salvador</Link></div>
-
-        <div className='navbar-links'>
-          <ul>
-                <li><Link href='/about'>About</Link></li>
-                <li><a href='/project'>Projects</a></li>
-                <li><a href='/ErikaResume.pdf'>Resume</a></li>
-            </ul>
-        </div>
-           
-      </nav>
-    </div>
-        )
-  
+      <div className="navbar-links">
+        <ul>
+          <li><a href="#work">projects</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar
