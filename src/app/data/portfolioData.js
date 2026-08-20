@@ -47,26 +47,29 @@ export const experience = [
   {
     role: "Software Engineer Intern",
     company: "Fidelity Investments",
+    logo: "/Fidelity-Logo.png",
     location: "Westlake, TX",
     dates: "June 2026 – August 2026",
     impact:
-      "Built an internal AI agent (Python, LangChain, YAML, Splunk SPL) that automates natural-language-to-Splunk-query generation, cutting query dev time by 80%.",
+      "Built an internal AI agent that turns plain English into Splunk queries, cutting query dev time by 80%.",
   },
   {
     role: "Software Engineer Intern",
     company: "Thrivent",
+    logo: "/thrivent_logo.png",
     location: "Remote",
     dates: "June 2025 – August 2025",
     impact:
-      "Designed a component-driven UI for a client-facing dashboard serving 2.3 million clients; built a dynamic CTA banner with GraphQL and JavaScript.",
+      "Designed component-driven UI for a client-facing dashboard serving 2.3 million clients.",
   },
   {
     role: "Campus Manager",
     company: "iCode Cypress",
+    logo: "/iCode-logo.webp",
     location: "Cypress, TX",
     dates: "August 2022 – August 2024",
     impact:
-      "Designed and led lessons in HTML, CSS, JavaScript, and Python; managed 15+ employees; authored onboarding training resources.",
+      "Managed 15+ employees and designed the coding curriculum taught across the program.",
   },
 ]
 
@@ -84,14 +87,14 @@ export const skills = [
 ]
 
 export const galleryPhotos = [
-  { src: "/hackathon.JPG", rotate: -6 },
-  { src: "/ktp1.jpg", rotate: 4 },
-  { src: "/Erika4.jpg", rotate: -2 },
-  { src: "/friends.jpg", rotate: 7 },
-  { src: "/Erika7.jpeg", rotate: -4 },
-  { src: "/ktp3.JPG", rotate: -6 },
-  { src: "/koin1.jpg", rotate: 4 },
-  { src: "/ktp4.JPG", rotate: -2 },
+  { src: "/photos/gallery-1.jpg", rotate: -6 },
+  { src: "/photos/gallery-2.jpg", rotate: 4 },
+  { src: "/photos/gallery-3.jpg", rotate: -2 },
+  { src: "/photos/gallery-4.jpg", rotate: 7 },
+  { src: "/photos/gallery-5.jpg", rotate: -4 },
+  { src: "/photos/gallery-6.jpg", rotate: -6 },
+  { src: "/photos/gallery-7.jpg", rotate: 4 },
+  { src: "/photos/gallery-8.jpg", rotate: -2 },
 ]
 
 export const contactLinks = [

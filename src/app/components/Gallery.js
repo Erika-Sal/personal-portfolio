@@ -7,7 +7,7 @@ export default function Gallery() {
 
   return (
     <div className="gallery-section reveal">
-      <h2 className="section-heading">Life outside the IDE</h2>
+      <h2 className="section-heading">Life Outside the IDE</h2>
       <div className="gallery-grid">
         {galleryPhotos.map((photo) => (
           <div

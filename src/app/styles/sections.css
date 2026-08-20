@@ -16,28 +16,59 @@
   display: inline-block;
 }
 
-.hero-polaroid {
-  --rotate: -4deg;
-  width: min(65vw, 280px);
+.hero-stack {
+  position: relative;
+  width: min(65vw, 17.5rem);
+  aspect-ratio: 4 / 5.3;
 }
 
-.hero-polaroid img {
+.hero-stack-card {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  background-color: var(--cream);
+  padding: 0.9rem 0.9rem 2.4rem 0.9rem;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.hero-stack-card.is-settling {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s ease;
+}
+
+.hero-stack-card:active {
+  cursor: grabbing;
+}
+
+.hero-stack-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 4 / 5;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  pointer-events: none;
 }
 
 .sticker-hero {
   position: absolute;
-  bottom: -0.5rem;
+  bottom: 1.75rem;
   right: -1.5rem;
   transform: rotate(6deg);
+  z-index: 10;
 }
 
 .hero-text {
-  max-width: 560px;
+  max-width: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .hero-name {
@@ -48,7 +79,10 @@
 }
 
 .hero-bio {
-  font-size: 1.1rem;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2.8vmin, 1.5rem);
+  color: var(--dark);
   margin: 0;
 }
 
@@ -58,6 +92,55 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    gap: 7vmin;
+  }
+
+  .hero-photo-wrap {
+    flex-shrink: 0;
+  }
+
+  .hero-stack {
+    width: min(30vw, 27rem);
+  }
+
+  .sticker-hero {
+    bottom: 2.5rem;
+    right: -2rem;
+  }
+
+  .hero-text {
+    max-width: 40rem;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.75rem;
+  }
+
+  .hero-name {
+    font-size: clamp(3.5rem, 8.5vmin, 5.5rem);
+  }
+
+  .hero-bio {
+    font-size: clamp(1.4rem, 3.2vmin, 1.9rem);
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    padding: 1.1rem 2.5rem;
+    font-size: 1.15rem;
+  }
 }
 
 /* Work section: Featured project + accordion */
@@ -170,43 +253,86 @@
 }
 
 .experience-section {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-.timeline {
+.logo-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.logo-card {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(7rem, 18vmin, 10rem);
+  padding: 2rem 1.5rem;
+  background-color: var(--pill-bg);
+  border: 2px solid var(--pill-border);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.timeline-entry {
-  border-left: 4px solid var(--green);
-  padding-left: 1.5rem;
+.logo-card:hover {
+  border-color: var(--green);
 }
 
-.timeline-role {
-  margin: 0 0 0.25rem;
-  font-size: 1.3rem;
+.logo-card-selected {
+  border-width: 3px;
+  border-color: var(--green);
+  background-color: rgba(105, 150, 93, 0.12);
 }
 
-.timeline-company {
-  margin: 0 0 0.15rem;
+.logo-card-selected::after {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  border: 2px solid white;
+}
+
+.logo-card-img {
+  max-width: 100%;
+  max-height: 8vmin;
+  min-height: 3rem;
+  object-fit: contain;
+}
+
+.experience-panel {
+  margin-top: 2rem;
+  padding: 2.25rem 2.5rem;
+  background-color: rgba(105, 150, 93, 0.05);
+  border-left: 0.35rem solid var(--green);
+  border-radius: 0 0.75rem 0.75rem 0;
+  animation: fadeIn 0.4s ease;
+}
+
+.experience-panel-role {
+  margin: 0 0 0.4rem;
+  font-size: 1.7rem;
+}
+
+.experience-panel-company {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
   color: var(--green);
   font-weight: bold;
-  font-family: "Libre Caslon Display", serif;
+  font-family: inherit;
 }
 
-.timeline-dates {
-  margin: 0 0 0.5rem;
-  font-size: 0.9rem;
-  color: #777;
-  font-family: "Libre Caslon Display", serif;
-}
-
-.timeline-impact {
+.experience-panel-impact {
   margin: 0;
+  font-size: 1.1rem;
+  font-family: inherit;
 }
 
 /* About: Skills + Gallery */
@@ -256,8 +382,9 @@
 }
 
 .gallery-section {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 3rem 0;
   text-align: center;
 }
 
@@ -265,12 +392,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .gallery-photo {
-  width: min(38vw, 190px);
+  width: min(26vw, 260px);
+}
+
+.gallery-photo img {
+  object-fit: contain;
+  background-color: var(--cream);
 }
 
 .gallery-photo:hover img {
@@ -341,8 +473,8 @@
     padding-top: 7rem;
   }
 
-  .hero-polaroid {
-    width: min(70vw, 220px);
+  .hero-stack {
+    width: min(70vw, 13.75rem);
   }
 
   .sticker {
@@ -355,12 +487,30 @@
   }
 
   .gallery-photo {
-    width: min(45vw, 160px);
+    width: min(65vw, 240px);
   }
 
   .accordion-header {
     font-size: 1rem;
     padding: 1rem;
+  }
+
+  .logo-card {
+    min-height: clamp(4.5rem, 18vmin, 6rem);
+    padding: 1rem 0.75rem;
+  }
+
+  .logo-card-img {
+    max-height: 6vmin;
+    min-height: 2rem;
+  }
+
+  .experience-panel {
+    padding: 1.5rem 1.75rem;
+  }
+
+  .experience-panel-role {
+    font-size: 1.4rem;
   }
 
   .contact-links {
