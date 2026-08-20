@@ -6,8 +6,8 @@ export const featuredProject = {
   title: "NextHire",
   badge: "1st place, FidHacks",
   description:
-    "A women's empowerment journaling platform with audio recording, built with a 3-person team in 24 hours at Fidelity's hackathon. This is actually how I ended up interning there.",
-  tech: ["Next.js", "React"],
+    "A women's empowerment journaling platform with audio recording and chrome extension, built with a 3-person team in 24 hours at Fidelity's hackathon. This is how I recieved my internship offer.",
+  tech: ["Tailwind CSS", "Web Audio API"],
   github: "https://github.com/Erika-Sal/fidhacksproject",
 }
 

@@ -12,7 +12,7 @@ export default function FeaturedProject() {
         <FaTrophy /> {featuredProject.badge}
       </div>
 
-      <p className="eyebrow">the one I&apos;m proudest of</p>
+      <p className="eyebrow featured-eyebrow">the one I&apos;m proudest of</p>
       <h2 className="featured-title">{featuredProject.title}</h2>
       <p className="featured-description">{featuredProject.description}</p>
 

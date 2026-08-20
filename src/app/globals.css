@@ -192,6 +192,14 @@ a {
   margin-bottom: 0.75rem;
 }
 
+.accordion-eyebrow {
+  font-size: 1.1rem;
+}
+
+.featured-eyebrow {
+  font-size: 1.1rem;
+}
+
 /* Section heading, used where the section has no separate title beneath it */
 .section-heading {
   font-family: 'Libre Bodoni', cursive;

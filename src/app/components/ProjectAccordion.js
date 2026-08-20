@@ -28,7 +28,7 @@ export default function ProjectAccordion() {
 
   return (
     <div className="accordion reveal">
-      <p className="eyebrow">a few other things I&apos;ve made (tap to expand)</p>
+      <p className="eyebrow accordion-eyebrow">a few other things I&apos;ve made (tap to expand)</p>
 
       {otherProjects.map((project) => {
         const isOpen = !!openIds[project.id]
@@ -51,12 +51,10 @@ export default function ProjectAccordion() {
                     <span key={tech} className="tech-tag">{tech}</span>
                   ))}
                 </div>
-                {project.github ? (
+                {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn-dark">
                     View code
                   </a>
-                ) : (
-                  <span className="btn-dark btn-disabled">Code coming soon</span>
                 )}
               </div>
             )}
